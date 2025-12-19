@@ -73,7 +73,7 @@ nav > a {
     padding: 10px;
     text-decoration: none;
     font-weight: bolder;
-    transition-duration: 0.5s; /*Ele demorar para colocar os efeitos do hover*/
+    transition-duration: 0.7s; /*Ele demorar para colocar os efeitos do hover*/
 }
 
 nav > a:hover {
@@ -143,7 +143,7 @@ main img.pequena {
     margin: auto;
 }
 
-div.video {
+div.video { 
     background-color: var(--cor5);
     margin: 0px -20px 30px -20px;
     padding: 20px;
