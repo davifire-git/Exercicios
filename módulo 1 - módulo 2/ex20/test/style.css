@@ -1,0 +1,17 @@
+ 
+ /* id --- #
+    class --- .
+   
+   */
+ 
+ body {
+    background-image: linear-gradient(to top, rgb(220, 220, 236), rgba(56, 56, 218, 0.726));
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.726);
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    
+ }
+

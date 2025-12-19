@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+    /*
+        Em Html é id --> Em Css é #
+        Em Html é class --> Em Css é .
+
+        O id so faz uma função
+        O class faz várias funções
+    */
+
+    body {
+        background-image: linear-gradient(to left, rgb(145, 145, 194), rgb(92, 92, 197));
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+        color:  rgb(19, 19, 26);
+    }
+    h1#principal {
+        background-color: aliceblue;
+        color: rgb(37, 37, 37);
+        text-align: center;
+        
+        
+    }
+    h2 {
+        color:  rgb(19, 19, 26);
+    }
+
+    p {
+        text-align: left;
+        text-indent: 20px;
+    }
+
+    .basico {
+        color:  rgb(92, 197, 139);
+    }
+    .intermediario {
+        color:  rgb(178, 197, 92);
+    }
+    .avançado{
+        color:  rgb(159, 92, 197);
+    }
+    .destaque {
+        color:rgb(197, 92, 92) ;
+        background-color: darkolivegreen;
+    }
+    #inter {
+        width:208px;
+   /*   padding-left:300px ;
+        padding-right: 300px; */
+    }

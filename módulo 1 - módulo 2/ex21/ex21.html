@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*  SELETORES PERSONALIZADOS
+            #  =  id
+            .  =  class
+            :  =  pseudo-class
+            :: =  pseudo-elemento
+            >  =  clidren
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        a {
+            color: red;
+            text-decoration: none;
+        }
+        li {
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+        }
+        a:visited {     /*Depois de visitado o site ele muda de cor*/
+            color: darkred;
+        }
+        a:hover {       /*Quando se passa o mouse em cima ele fica grifado em baixo*/
+            text-decoration: underline;
+        }
+        a:active {      /*Quando o link for ativado ele mudar de cor*/
+            color: yellow;
+        }
+        a::before {     /*Eu disse para tudo que fosse antes do link tivesse um conteúdo*/
+            content: ' (Link) ';
+            font-weight: normal;
+            text-decoration: none;
+            color: gray;
+        }
+        a::after {      /*Eu disse para tudo que fosse depois do link tivesse um conteúdo*/
+            content: ' (Link) ';
+            font-weight: normal;
+            text-decoration: none;
+            color: gray;
+        }
+        .especial {     /*Esse link ele ignora as tags anteriores e funciona independente
+                                     Então eu coloquei novas cores                      */
+            background-color: rgb(255, 8, 8);
+            border-radius: 6px;
+            color:white;
+        }
+        .especial::after {  /*  Fiz a mesma coisa para depois do código ele colocar uma mensagem*/
+            content: '⬅';
+        }
+        .especial::before { /*Colocar mensagem depois do código*/
+            content: '⮕';
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFhlTnVwendjcU85SFE5ZlZUMWZUNGtKNVpRd3xBQ3Jtc0tsNldHWndqXzlqSDA3bGxTa1VTT2JQZ3Y0TnZFQkpFRFF5N0VTRUdmT185S3dUaGtEeXMweE45V0pweTVza2dhWU9sWWNEX0pKbHo5T2FDc2xtcEZCaWlJMFdETUl2WHpNamJrNE4tZ0wtczExY2xBYw&q=https%3A%2F%2Fgithub.com%2Fgustavoguanabara%2Fhtml-css%2Ftree%2Fmaster%2Faulas-pdf&v=vMlrcOVr7po" target="_blank">Repósitorio Github</a></li>
+        <li><a href="https://www.youtube.com/watch?v=vMlrcOVr7po&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=22" target="_blank" class="especial">Repósitorio Youtube</a></li>
+        <li><a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnFvWFRxMmZFS21kZ1U2SW5mbGZYQ1AyS1VvQXxBQ3Jtc0trTzY5eEp5UjNhWmo1WlVIVEl6b2tSWThhN04yT1drbU5fbFNra2V1eU9RUElja1FCbXRHOER5SWNLVlVPRl81cFN3Qi1sR00yZE1ydU1xSnUzeEwzV2NrbDJQakNkYUVoTG5JVmJrTS0zeFYtN1lPcw&q=https%3A%2F%2Fwww.cursoemvideo.com%2F&v=vMlrcOVr7po" target="_blank">Site do CursoemVídeo</a></li>
+    </ul>
+</body>
+</html>

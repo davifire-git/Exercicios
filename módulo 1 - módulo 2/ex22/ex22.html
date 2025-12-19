@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+
+        body {
+            background-image: linear-gradient(to top, rgba(97, 97, 126, 0.89), rgba(74, 74, 241, 0.527));
+        }
+
+        h1 {
+
+            /*O border-whidth serve para você mecher no tamanho da borda*/
+            /*Tem vários tipos de borda no seu estilo mostrando tanto um estilo solid-(Borda Solida), groove(Um conjunto de cores), double(2 Bordas),dashet(Traçado),dotted(Pontos), none(Nada),*/
+            /*O border-color da cores a borda não mechendo no background-color*/
+            /*Consigo escolher como o padding ele ira dar a distancia entre o texto e a borda*/
+
+
+            background-color: lightgray;
+            height: 300px;
+            width: 600px;
+            text-align: center;
+            border-width: 10px;
+            border-style: groove; 
+            border-color: darkslategray;
+            
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 275px;
+
+
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+        }
+        a {
+
+            background-color: white;
+            text-decoration: none;
+
+            border-width: 3px;
+            border-style: solid;
+            border-color: blue;
+            /*
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            */
+        }
+        p {
+            background-color: rgba(54, 163, 252, 0.788);
+            width: 600px;
+            height: 300px;
+
+            border-width: 4px;
+            border-style: solid;
+            border-color: black;
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 275px;
+
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p> <a href="#">links são exemplos de caixas inline-level</a>.Vamos ver como funciona.</p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div > p.escondido { /*Fiz com que o código p que tivesse dentro da div ficasse escondido*/
+            display: none;
+        }
+
+         /* Fiz com que esse código que estivesse dentro da div caso  pasasse o mouse ele aparecesse o p colocado dentro da div*/
+
+        div:hover > p.escondido { /*também funcionando para id ou class para escolher especificadamente cada*/
+            display: block;
+            color: white;                  
+            background-color: red;
+            width: 180px;
+
+        }
+        div:hover {
+            color: red;
+        }
+        p {
+            color:black;
+        }
+        div:hover > p.verde {
+            color: green;
+        }
+        p.a:hover  {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mause sobre o texto abaixo</p>
+    <div>Passe o mause aqui 
+        <p class="verde">Texto</p>
+        <p class="escondido">TEXTO ESCONDIDO...</p>
+    </div>
+    <p class="a">A</p>
+    <p>Fim do exemplo</p>
+
+    
+</body>
+</html>

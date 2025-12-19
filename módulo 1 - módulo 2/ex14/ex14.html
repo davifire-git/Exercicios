@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+        * { /* Configurações globais da css*/ /*Servindo para não fazer o degrade bugar*/
+            height: 100%;
+        }
+        body { /*Esse backgrond serve para fazer um degrade ele le da direita para esquerda*/
+           background-image: linear-gradient(to top,#F5BB00, #F58B00,#F6046D,#F401BB,#A308E8);
+           /* background-image: radial-gradient(circle, #F5BB00, #F58B00,#F6046D,#F401BB,#A308E8);*/
+          /* background-image: linear-gradient(to top,#F5BB00 10%, #F58B00 ,#F6046D ,#F401BB ,#A308E8 );*/
+            background-attachment: fixed;
+            /*O outro background está servindo para fixar esse primeiro background*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente</h1>
+</body>
+</html>

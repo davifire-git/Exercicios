@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            background-image: linear-gradient(to top, #EDAA25, #B7BF99);
+            background-attachment: fixed;
+            font-family: 'Work Sans' Arial, Helvetica, sans-serif; 
+            font-size: 16px; 
+        
+            /* Ultilizar fontes como em, px*/
+                             /* 16px = 1em*/
+            
+        }
+
+        h1 {
+            /*
+
+            Tudo isso pode ser resumido por essa ultima linha de código
+            Apenas seguindo essa ordem e usando o comando font
+            font-style -> font-weight -> font-size -> font-family
+            
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            */
+            
+            font: italic bolder 58px Arial,Helvetica,sans-serif;
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.192);
+        }
+
+        h2 {
+            font: normal bolder 35px Arial,Helvetica,sans-serif;
+            text-align: center;
+            text-decoration: underline; /*Faz com que gere um sublinhado*/
+        }
+
+
+
+        p {
+            font: normal lighter 16.5px Arial,Helvetica,sans-serif;
+            text-align: center;
+            width: 40em;
+            margin: auto;
+        }
+    </style>
+    </head>
+    <body> 
+<br>
+<br>
+    <main style="
+            background-color: white; /* Isso faz criar a borda*/
+            border-radius: 20px;        /*Deixa redondo*/
+            margin: auto;               /*Deixa no centro*/
+            width: 50em;                /*Diminui o tamanho do texto*/
+            padding: 10px;              /*Da um espaço para o texto da borda*/
+            box-shadow: 5px 3px 3px #573e0d; /*Sombras nas bordas*/
+            ">
+
+    <h1>Trabalhando com fontes</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores consectetur facilis tenetur voluptatum id repudiandae laudantium. <strong> Dolorem veritatis </strong> enim illo voluptatem delectus corrupti quisquam quia, a, quae fugiat <i> ex at?Lorem</i> ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam nihil sint molestias ea repudiandae eum ducimus perspiciatis facere! Quod perspiciatis maiores voluptates necessitatibus ullam ipsam ex, recusandae et eum?</p>
+
+    <p>lorem
+
+    <h2>Subtítulo do Exercício</h2>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorum unde aspernatur repellat assumenda, aliquid explicabo quia, ad nesciunt ab, tempore voluptates. Ullam quae odit distinctio voluptatum omnis!</p>
+
+    </main>
+    </body>
+    </html>

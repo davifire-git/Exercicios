@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@400..900&display=swap');
+
+
+body {
+    background-color: rgb(242, 255, 172);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+header {
+    background-image: linear-gradient(to bottom, rgb(24, 214, 24), rgb(8, 53, 8));
+    margin: 0px;
+    text-align: center;
+    padding: 10px;
+    
+}
+h1 {
+    color: white;
+    font-size:40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+nav {
+    text-align: left;
+}
+nav > a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    text-decoration: underline;
+}
+main {
+    background-color: white;
+    box-shadow: 1px 1px 1px black;
+    width: 840px;
+    margin: auto;   
+    padding-top: 5px;
+    padding-bottom: 1px;
+    
+}
+h1#t1 {
+    color: green;
+    font-family: "Orbitron", sans-serif;
+    text-align: left;
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+}
+h2.t2 {
+    background-image: linear-gradient(to right, rgb(139, 247, 139), rgb(255, 255, 255));
+    color: green;
+    font-family: "Orbitron", sans-serif;
+    text-align: left;
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+}
+p {
+    text-align: justify;
+    text-indent: 20px;
+    margin: 10px;
+    line-height: 26px;
+}
+img {
+    display: flex;
+    margin: auto;
+}
+img#irina {
+    padding: 10px;
+}
+.video {
+    display: flex;
+    justify-content: center;
+}
+aside{
+    background-color: rgb(198, 241, 198);
+    width: 780px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin: 25px;
+}
+h1#final {
+    background-color: rgb(80, 150, 80);
+    width: 780px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+footer {
+    background-color: rgb(25, 97, 25);
+    text-align: center;
+    padding: 13px;
+}
+li::marker {
+    content: "✔ "; /* pode ser emoji ou símbolo */
+    color: rgb(0, 0, 0);
+}
+    .listas {
+        display: flex;
+        gap: 40px;     /* espaço entre as colunas */
+        background: #c7e8d4; /* cor de fundo parecida */
+        padding: 40px;
+    }
+
+    ul {
+        list-style: none; /* remove bolinhas */
+        margin: 0;
+        padding: 0;
+    }
+    
+    #diff {
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 150px;
+    }
+
+    .link {
+        text-decoration: none;
+        color: green;
+    }
+
+    .linka{
+        color: rgb(62, 158, 62);
+        padding: 6px;
+    }
+    a.linka:hover {
+        background: rgb(76, 105, 73);
+        text-decoration: none;
+    }
+
+    .linkb {
+        text-decoration: none;
+        color: rgb(26, 136, 26);
+        background: rgb(155, 219, 155);
+        padding-top: 2px;
+        padding-right: 3px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+    }
+    

@@ -1,0 +1,21 @@
+    
+    
+    body {
+        background-color: rgb(29, 29, 29);
+        font-size: 20px;
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        
+    }
+    h1 {
+        text-align: center;
+        color: white;
+        
+    }
+    p {
+        text-align: center;
+        color: white;
+    }
+
+
