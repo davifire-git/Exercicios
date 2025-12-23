@@ -7,66 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h2>🛒 Formatador de Produtos - Mercado Livre</h2>
-
-<div id="produtos"></div>
+<header>
+    <h1>🛒 Formatador de Produtos - Mercado Livre</h1>
+    
+    <div id="produtos"></div>
+</header>
 
 <button onclick="adicionarProduto()">➕ Adicionar Produto</button>
 <button onclick="gerarTexto()">📄 Gerar Formatação</button>
 
-<h3>Resultado Final</h3>
-<div id="resultado"></div>
-
-<script>
-function adicionarProduto() {
-    const div = document.createElement("div");
-    div.className = "produto";
-    div.innerHTML = `
-        <input placeholder="Nome do produto">
-        <input placeholder="Preço original (ex: 199,90)">
-        <input placeholder="Preço promocional (ex: 149,90)">
-        <input placeholder="Parcelamento (ex: 10x de 14,99)">
-        <input placeholder="Link de afiliado">
-    `;
-    document.getElementById("produtos").appendChild(div);
-}
-
-function gerarTexto() {
-    const produtos = document.querySelectorAll(".produto");
-    let textoFinal = "";
-
-    produtos.forEach(produto => {
-        const inputs = produto.querySelectorAll("input");
-
-        const nome = inputs[0].value;
-        const de = inputs[1].value;
-        const por = inputs[2].value;
-        const parcela = inputs[3].value;
-        const link = inputs[4].value;
-
-        textoFinal += `${nome}
-
-De R$ ${de}
-💸Por R$ ${por}
-💳Ou ${parcela}
-
-🔗Link para Compra:
-${link}
-
-*Promoção sujeita a alteração a qualquer momento
-
-
-
-`;
-    });
-
-    document.getElementById("resultado").innerText = textoFinal;
-}
-
-// Adiciona um produto automaticamente ao abrir
-adicionarProduto();
-</script>
+<footer>
+    <h3>Resultado Final</h3>
+    <div id="resultado"></div>
+</footer>
+    <script src="javascript.js"></script>
 
 </body>
 </html>
