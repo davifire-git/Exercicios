@@ -8,17 +8,30 @@
 
         /*Nesse exercício eu queria fazer a imagem ela esticar por toda a tela usando o background-size cover*/
         /*Mas caso o conteudo ser muito grande a imagem não ira funcionar*/
+        /*Sendo necessario usar o background-attachment fixed fazendo ele fixar o background*/
+
         body {
+            
+            /*
             background-color: black;
             background-image: url('imagens-cap19/wallpaper002.jpg');
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover; 
+            background-attachment: fixed;
+            */
+
+            /*Shorthand - background --> color > image > position > repeat > [size] > attachment */
+            
+            background: black url('imagens-cap19/wallpaper002.jpg') center top no-repeat fixed;
+            background-size: cover;
+            
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
+            min-width: 350px;
             padding: 10px;
             margin: auto;
             border: 1px solid black;
@@ -30,6 +43,10 @@
     <main>
         <h1>Teste para Imagem de Fundo</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsam facere nesciunt illo voluptatibus quisquam consequuntur saepe veritatis, soluta odit fugit quaerat veniam repellat rem ipsum, sint corrupti voluptatem exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odio velit aspernatur accusantium, similique alias quaerat voluptatum error sit voluptatibus ducimus facilis ab dicta aut hic nihil! Veritatis, vel doloremque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsam facere nesciunt illo voluptatibus quisquam consequuntur saepe veritatis, soluta odit fugit quaerat veniam repellat rem ipsum, sint corrupti voluptatem exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odio velit aspernatur accusantium, similique alias quaerat voluptatum error sit voluptatibus ducimus facilis ab dicta aut hic nihil! Veritatis, vel doloremque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsam facere nesciunt illo voluptatibus quisquam consequuntur saepe veritatis, soluta odit fugit quaerat veniam repellat rem ipsum, sint corrupti voluptatem exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odio velit aspernatur accusantium, similique alias quaerat voluptatum error sit voluptatibus ducimus facilis ab dicta aut hic nihil! Veritatis, vel doloremque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsam facere nesciunt illo voluptatibus quisquam consequuntur saepe veritatis, soluta odit fugit quaerat veniam repellat rem ipsum, sint corrupti voluptatem exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odio velit aspernatur accusantium, similique alias quaerat voluptatum error sit voluptatibus ducimus facilis ab dicta aut hic nihil! Veritatis, vel doloremque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsam facere nesciunt illo voluptatibus quisquam consequuntur saepe veritatis, soluta odit fugit quaerat veniam repellat rem ipsum, sint corrupti voluptatem exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odio velit aspernatur accusantium, similique alias quaerat voluptatum error sit voluptatibus ducimus facilis ab dicta aut hic nihil! Veritatis, vel doloremque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsam facere nesciunt illo voluptatibus quisquam consequuntur saepe veritatis, soluta odit fugit quaerat veniam repellat rem ipsum, sint corrupti voluptatem exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odio velit aspernatur accusantium, similique alias quaerat voluptatum error sit voluptatibus ducimus facilis ab dicta aut hic nihil! Veritatis, vel doloremque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsam facere nesciunt illo voluptatibus quisquam consequuntur saepe veritatis, soluta odit fugit quaerat veniam repellat rem ipsum, sint corrupti voluptatem exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odio velit aspernatur accusantium, similique alias quaerat voluptatum error sit voluptatibus ducimus facilis ab dicta aut hic nihil! Veritatis, vel doloremque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsam facere nesciunt illo voluptatibus quisquam consequuntur saepe veritatis, soluta odit fugit quaerat veniam repellat rem ipsum, sint corrupti voluptatem exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, odio velit aspernatur accusantium, similique alias quaerat voluptatum error sit voluptatibus ducimus facilis ab dicta aut hic nihil! Veritatis, vel doloremque.</p>
+
     </main>
 </body>
 </html>
