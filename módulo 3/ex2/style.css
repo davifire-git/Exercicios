@@ -1,0 +1,40 @@
+@charset "UTF-8";
+    
+    body {
+        margin: 0px;
+    }
+
+    header {
+        background-color: black;
+        color: white;
+        padding: 1px;
+        height: 270px;    
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 100px;
+    }
+
+    header p {
+        margin: -42px;
+        font-size: 20px;
+    }
+
+    header a {
+        text-decoration: none;
+        color: aliceblue;
+        font-weight: bolder;
+    }
+
+    header a:hover {
+        text-decoration: underline;
+        color: rgb(255, 255, 255);
+    }
+
+    main p {
+        font-size: 50px;
+        text-align: justify;
+        text-indent: 30px;
+        margin: 16px;
+    }
