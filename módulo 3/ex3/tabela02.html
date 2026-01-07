@@ -20,9 +20,22 @@
             border: 1px solid black;
             padding: 10px;
         }
+/*Da para fazer ao invés de escolher um número colocar impar(odd) e par(even) e escolher cores diferentes entre eles */
+        tbody > tr:nth-child(2n) {
+            background-color: gray;
+        }
+
+        caption {
+            background-color: lightgray;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            font-size: 1.5em;
+            font-weight: bolder;
+            padding: 10px;
+        }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: rgb(72, 72, 72);
             color: white;
         }
 
@@ -44,10 +57,11 @@
             TR, TD ,TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -162,7 +176,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
