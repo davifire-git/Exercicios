@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border: 5px solid rgba(162, 162, 162, 0.726);
+            width: 400px; /*Largura*/
+           height: 400px; /*Altura*/
+            border-collapse: collapse; /*Fez com que a borda elas ficassem juntas*/
+        }
+
+        td {
+            border: 1px solid black; /*Criei uma borda em volta para ´criar` a lista*/
+            padding: 8px;
+            text-align: center; /*Alinhamento Horizontal*/
+            vertical-align: top; /*Alinhamento Vertical*/
+        }
+
+        .numero {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha Primeira Tabela </h1>
+    <!--
+        Hierarquia de tabela (Simples)
+        TABLE = tabela
+        TABLE ROW = linha da tabela
+        TABLE HEADER = cabeçalho da tabela 
+        TABLE DATA = dado de tabela 
+    -->
+    <table> <!--tr são linhas e td são dados-->
+        <tr> <!--Primeira Linha-->
+            <td>A1</td> 
+            <td>B1</td>
+            <td>C1</td>
+        </tr> 
+        <tr> <!--Segunda Linha-->
+            <td>A2</td> 
+            <td>B2</td>
+            <td class="numero">C2</td>
+        </tr> 
+        <tr> <!--Terceira Linha-->
+            <td>A3</td> 
+            <td>B3</td>
+            <td class="numero">C3</td>
+        </tr> 
+        <tr> <!--Quarta Linha-->
+            <td>A4</td> 
+            <td>B4</td>
+            <td>C4</td>
+        </tr> 
+    </table>
+</body>
+</html>
