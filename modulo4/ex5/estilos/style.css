@@ -74,7 +74,7 @@ form > div.campo {
     margin: 5px 0px;
 }
 
-form.campo > label {
+div.campo > label {
     display: none;
 }
 
