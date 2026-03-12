@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #202124;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 448px;
+    margin-top: 8vh;
+}
+
+.login-box {
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 48px 40px 36px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.logo img {
+    height: 24px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .1px;
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.input-form {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 13px 15px;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-container input:focus {
+    border: 2px solid #1a73e8;
+    padding: 12px 14px;
+    /* Adjust padding to compensate for 2px border avoiding layout shift */
+}
+
+.input-container label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 0 4px;
+    color: #5f6368;
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+}
+
+/* Material Design floating label technique */
+.input-container input:focus~label,
+.input-container input:not(:placeholder-shown)~label {
+    top: 0;
+    font-size: 12px;
+    color: #1a73e8;
+}
+
+.input-container input:not(:focus):not(:placeholder-shown)~label {
+    color: #5f6368;
+}
+
+.forgot-email {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.forgot-email:hover {
+    text-decoration: underline;
+}
+
+.guest-info {
+    text-align: left;
+    color: #5f6368;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+.guest-info p {
+    margin-bottom: 4px;
+}
+
+.guest-info a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.guest-info a:hover {
+    text-decoration: underline;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-create {
+    background: none;
+    border: none;
+    color: #1a73e8;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: -8px;
+    /* To align the text with the layout */
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-create:hover {
+    background-color: #f6fafe;
+}
+
+.btn-next {
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 20px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-next:hover {
+    background-color: #1b66c9;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #70757a;
+    padding: 24px 0;
+}
+
+.language-dropdown select {
+    background: none;
+    border: none;
+    color: #70757a;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    padding: 4px 0;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #70757a;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.footer-links a:hover {
+    background-color: #f1f3f4;
+}
+
+/* Responsividade: ajusta para telas menores (ex: dispositivos móveis) */
+@media screen and (max-width: 450px) {
+    .login-box {
+        border: none;
+        padding: 24px 24px;
+        background-color: transparent;
+    }
+
+    .login-wrapper {
+        margin-top: 0;
+        max-width: 100%;
+    }
+
+    .footer {
+        padding: 0 24px 24px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
