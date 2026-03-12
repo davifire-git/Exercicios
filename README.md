@@ -12,3 +12,4 @@ Exercícios do Curso do Gustavo Guanabara de Html5, Css3 e mais!!
 <br>
 <p>Projeto de Redes Sociais usando IFRAME!</p>
 <a href='https://davifire-git.github.io/Exercicios/modulo4/ex2/ex2' target="_blank">Link</a>
+<meta name="google-site-verification" content="JiAU5RhtBglbFpOm03lmIRSncttemw6IICREUOoDnOw" />
