@@ -4,15 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const stepPassword = document.getElementById('step-password');
     const formEmail = document.getElementById('form-email');
     const formPassword = document.getElementById('form-password');
-    
+
     const inputEmail = document.getElementById('email');
     const inputPassword = document.getElementById('password');
-    
+
     const emailError = document.getElementById('email-error');
+    const emailErrorText = document.getElementById('email-error-text');
     const passwordError = document.getElementById('password-error');
-    
+    const passwordErrorText = document.getElementById('password-error-text');
+
     const userDisplayEmail = document.getElementById('user-display-email');
-    const fakeHiddenEmail = document.getElementById('email-hidden');
     const btnBack = document.getElementById('btn-back');
     const showPwdCheckbox = document.getElementById('show-pwd-checkbox');
     const loader = document.getElementById('loader');
@@ -30,42 +31,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Validar Email básico
-    const validateEmail = (email) => {
-        return /\S+@\S+\.\S+/.test(email) || !isNaN(email) && email.length >= 8;
+    // Funções de erro para reutilizar
+    const showError = (inputElement, errorElement, textElement, message) => {
+        inputElement.classList.add('error-border');
+        textElement.textContent = message;
+        errorElement.classList.add('show-error');
+    };
+
+    const clearError = (inputElement, errorElement) => {
+        inputElement.classList.remove('error-border');
+        errorElement.classList.remove('show-error');
     };
 
     // Submissão do Formulário de E-mail
     formEmail.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        const emailValue = inputEmail.value.trim();
-        
+
+        // Remove espaços antes e depois do e-mail
+        let emailValue = inputEmail.value.trim();
+
+        // Limpar os erros caso existam
+        clearError(inputEmail, emailError);
+
+        // Validação 1: Campo Vazio
         if (emailValue === '') {
-            inputEmail.classList.add('error-border');
-            emailError.textContent = "Digite um e-mail ou número de telefone válido";
-            emailError.classList.add('show-error');
+            showError(inputEmail, emailError, emailErrorText, "Digite um e-mail ou número de telefone");
             return;
         }
 
-        // Tira o erro se estava mostrando
-        inputEmail.classList.remove('error-border');
-        emailError.classList.remove('show-error');
-        
-        savedEmail = emailValue;
-        
+        // Validação 2: Verificar se parece com um telefone
+        const isPhone = /^\d{8,15}$/.test(emailValue.replace(/\D/g, ''));
+
+        // Regras de negócio restritas (Exigimos @gmail.com)
+        if (!emailValue.includes('@') && !isPhone) {
+            // Se o usuário digitou apenas texto (ex: "davib"), o Google anexa @gmail.com sozinho
+            emailValue += '@gmail.com';
+        } else if (emailValue.includes('@')) {
+            // Se ele colocou um '@', mas não for do Gmail, bloqueamos como solicitado
+            const domain = emailValue.split('@')[1].toLowerCase();
+            if (domain !== 'gmail.com') {
+                showError(inputEmail, emailError, emailErrorText, "Não foi possível encontrar sua Conta do Google. Use um @gmail.com.");
+                return;
+            }
+        }
+
+        savedEmail = emailValue.toLowerCase(); // Guarda email e converte para minúsculo
+
         // Ativando animação de carregamento
         await showLoader(800);
-        
+
         // Transição de tela
         userDisplayEmail.textContent = savedEmail;
-        fakeHiddenEmail.value = savedEmail; // pra questões de auto-save de senha do browser
-        
+
+        // Add as animações
         stepEmail.classList.add('slide-left-out');
         stepPassword.classList.remove('hidden');
         stepPassword.classList.add('slide-right-in');
 
-        // Um pequenino delay para ativar animação
+        // Um pequeno delay para o navegador processar a classe nova antes de animar
         setTimeout(() => {
             stepPassword.classList.add('slide-right-in-active');
             setTimeout(() => {
@@ -73,13 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 stepEmail.classList.remove('slide-left-out');
                 stepPassword.classList.remove('slide-right-in', 'slide-right-in-active');
                 inputPassword.focus();
-            }, 400); // duracao da transicao css
+            }, 400); // duração da transição css
         }, 10);
     });
 
-    // Botão Voltar (Click no Perfil)
-    btnBack.addEventListener('click', async () => {
-        
+    // Limpar o erro no momento exato em que o usuário voltar a digitar
+    inputEmail.addEventListener('input', () => clearError(inputEmail, emailError));
+    inputPassword.addEventListener('input', () => clearError(inputPassword, passwordError));
+
+    // Botão Voltar (Click no Perfil do usuário)
+    btnBack.addEventListener('click', () => {
+        // Reset da senha ao voltar
+        inputPassword.value = '';
+        clearError(inputPassword, passwordError);
+
         stepPassword.classList.add('slide-right-out');
         stepEmail.classList.remove('hidden');
         stepEmail.classList.add('slide-left-in');
@@ -98,29 +128,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Submissão do Formulário de Senha
     formPassword.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const passValue = inputPassword.value;
-        if(passValue === '') {
-            inputPassword.classList.add('error-border');
-            passwordError.classList.add('show-error');
+
+        // Validar senha vazia
+        if (passValue === '') {
+            showError(inputPassword, passwordError, passwordErrorText, "Digite uma senha");
             return;
         }
 
-        inputPassword.classList.remove('error-border');
-        passwordError.classList.remove('show-error');
-
         // Simula loading final
         await showLoader(1200);
-        
-        // Comportamento fake final
-        alert(`Login efetuado com sucesso!\nEmail: ${savedEmail}`);
-        
-        // Reset 
+
+        // Comportamento final com sucesso
+        alert(`Login efetuado com sucesso!\nSua conta simulada: ${savedEmail}`); // Alerta de teste
+
+        // Retorna silenciosamente para a página inicial apagando rastro
         inputPassword.value = '';
         btnBack.click();
     });
 
-    // Mostrar ocultar senha
+    // Função nativa do Google: Mostrar ou Ocultar Senha
     showPwdCheckbox.addEventListener('change', () => {
         if (showPwdCheckbox.checked) {
             inputPassword.type = 'text';
@@ -129,14 +157,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Remover borda de erro ao digitar
-    inputEmail.addEventListener('input', () => {
-        inputEmail.classList.remove('error-border');
-        emailError.classList.remove('show-error');
-    });
-
-    inputPassword.addEventListener('input', () => {
-        inputPassword.classList.remove('error-border');
-        passwordError.classList.remove('show-error');
-    });
 });
