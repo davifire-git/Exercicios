@@ -8,14 +8,16 @@
         div.conteiner { /*Pai*/
             background-color: lightsalmon;
             display: flex; /*O pai ultiliza display*/
-            flex-flow: row wrap;
+            flex-flow: row wrap-reverse;
+          /*justify-content: space-around;
+            align-items: center;*/
         }
 
         div.item { /*Filhos*/
             background-color: lightblue;
             border: 1px solid black;
             text-align: center; /*O filho usa flex*/
-            flex: auto;
+            
         }
     </style>
 </head>
