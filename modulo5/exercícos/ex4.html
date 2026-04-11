@@ -6,31 +6,34 @@
     <title>Exercícicos</title>
     <style> 
 
-        body {
+        * {
             margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
         }        
 
         .container{
             background-color: rgb(191, 238, 238);
             display: flex;
-            flex-flow: wrap row;
+            flex-flow: row nowrap;
             align-items: center;
             justify-content: space-between;
-            
-            margin: auto;
-            width: 100px;
+
+            height: 100vh;
         }
 
-        .container div{
+        div{
             background-color: rgb(80, 202, 202);
             text-align: center;
+            width: 100px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-  <div>A</div>
-  <div>B</div>
-  <div>C</div>
+   <main class="container">
+         <div>A</div>
+         <div>B</div>
+         <div>C</div>
+   </main>
 </body>
 </html>
