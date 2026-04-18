@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner { /*Pai*/
+            background-color: lightsalmon;
+            display: flex; /*O pai ultiliza display*/
+            flex-flow: row wrap;
+        }
+
+        div.item { /*Filhos*/
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 300px;
+            flex-shrink: 0; /*Ele diz se ele pode encolher ou não,sendo 0 (não podendo encolher) e sendo 1 (podendo encolher)*/
+            flex-grow: 1; /*Ele diz se ele pode aumentar ou não,sendo 0(não podendo aumentar) e sendo 1 (podendo aumentar)*/
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus possimus atque nulla ratione delectus quis doloremque ex saepe neque totam dolores accusamus, maiores facilis dolor asperiores laudantium numquam similique rerum!</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam commodi incidunt repellendus saepe repudiandae cupiditate, libero culpa? Consequatur ipsa eum, voluptatem, dignissimos perferendis ullam enim minus exercitationem sunt cumque natus?Lorem ipsum dolor sit amet consectetur adipisicing elit. At sunt eligendi alias dicta accusantium delectus consectetur quisquam modi necessitatibus voluptate, veniam magnam obcaecati aliquid aperiam quod atque. Natus, possimus magni.</div>
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate impedit aperiam, optio eos perspiciatis eum voluptate quam exercitationem placeat soluta repellat autem, unde quae iste debitis reiciendis necessitatibus, minima fuga?Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis velit officia temporibus saepe quasi pariatur quam quos ipsam voluptate praesentium, hic eveniet. Nostrum id enim doloribus nam hic quos?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis doloremque architecto quo illum beatae porro alias qui, nulla, minus nihil quam aspernatur quibusdam impedit fuga, cumque expedita deserunt commodi officia?</div>
+    </div>
+</body>
+</html>
