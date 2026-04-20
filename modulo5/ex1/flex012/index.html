@@ -15,32 +15,24 @@
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
+            flex-basis: 200px;
             flex-shrink: 1; /*Ele diz se ele pode encolher ou não,sendo 0 (não podendo encolher) e sendo 1 (podendo encolher)*/
             flex-grow: 0; /*Ele diz se ele pode aumentar ou não,sendo 0(não podendo aumentar) e sendo 1 (podendo aumentar)*/
         }
 
         div#cxa {
-        flex-grow: 0;
-        flex-shrink: 0;    
-        flex-basis: 200px;
-        
-        flex: 0 0 200px;
+        flex-shrink: 0;
+        flex-grow: 0;            
         }
 
         div#cxb {
-        flex-grow: 2;
         flex-shrink: 1;
-        flex-basis: 200px;
-
-        flex: 2 1 200px;
+        flex-grow: 2;
         }   
 
         div#cxc {
-        flex-grow: 4;
         flex-shrink: 8;
-        flex-basis: 200px;
-
-        flex: 4 8 200px;
+        flex-grow: 4;    
         }
     </style>
 </head>
