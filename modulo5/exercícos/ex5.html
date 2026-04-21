@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Site Flex</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            background-color: rgb(239, 239, 239);
+        }
+
+        header {
+            background-color: rgb(188, 188, 188);
+            display: flex;
+            padding: 10px;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        header h1{
+            /*flex: 0 1 200px;*/
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            flex-flow: row nowrap;
+            flex: 0 1;
+            text-align: center;
+        }
+
+        a {
+            flex: 1 0 100px;
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            margin: 7px;
+        }
+
+        main {
+            background-color: rgba(211, 211, 211, 0.768);
+            height: 500px;
+            width: 600px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.344);
+        }
+
+        @media screen and (max-width:768px) {
+            header {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    nav {
+        flex-direction: column;
+        width: 30%;
+    }
+
+    a {
+        width: 100%;
+    }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Site</h1>
+        <nav>
+            <a href="#">Opção 1</a>
+            <a href="#">Opção 2</a>
+            <a href="#">Opção 3</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Importante</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos nemo repellendus, error perferendis sequi quam est recusandae fuga iste, reiciendis earum qui nam ipsum dolores? Odit repellat natus possimus vel?</p>
+    </main>
+</body>
+</html>
