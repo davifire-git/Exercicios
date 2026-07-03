@@ -1,0 +1,40 @@
+/*Tudo que tem @ significa que é uma regra*/
+
+@charset "UTF-8";
+
+/* * Geral atua sobre todos */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: rgb(216, 216, 216);
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    background-color: var(--cor-primaria);
+    margin: auto;
+    width: 650px;
+    height: 600px;
+    padding-top: 3px;
+    border-radius: 7px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.466);
+}
+
+section, h1{
+    text-align: center;
+}
+
+section, legend {
+    padding: 5px;
+    text-align: justify;
+}
+
