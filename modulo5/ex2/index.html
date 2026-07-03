@@ -1,28 +1,221 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NADA</title>
-    <style>
-        body { 
-            background-color: darkgray;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        }
-        div#menu { 
-            background-color: blue;
-            width: 300px;
-            height: 500px;
-            margin: auto;
-            border-radius: 5px;
-        }
-    </style>
+<title>Meu Projeto</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#d9d9d9;
+display:flex;
+justify-content:center;
+padding:30px;
+min-height:100vh;
+}
+
+.container{
+width:100%;
+max-width:450px;
+background:white;
+border-radius:30px;
+padding:40px 25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+position:relative;
+overflow:hidden;
+}
+
+.container::before{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:rgba(255,100,100,.15);
+filter:blur(70px);
+bottom:-100px;
+right:-100px;
+border-radius:50%;
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+margin-bottom:40px;
+font-weight:bold;
+}
+
+.profile{
+text-align:center;
+margin-bottom:35px;
+}
+
+.logo{
+width:90px;
+height:90px;
+border-radius:50%;
+background:#eee;
+margin:auto;
+overflow:hidden;
+}
+
+.logo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.profile h1{
+margin-top:15px;
+font-size:35px;
+}
+
+.profile p{
+color:#555;
+margin-top:5px;
+}
+
+.links{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.card{
+background:#f4f4f4;
+padding:20px;
+border-radius:15px;
+display:flex;
+align-items:center;
+text-decoration:none;
+color:black;
+transition:0.3s;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.icon{
+font-size:30px;
+margin-right:15px;
+width:40px;
+text-align:center;
+}
+
+.info{
+flex:1;
+text-align:center;
+font-weight:bolder;
+}
+
+.sub{
+font-size:13px;
+color:#666;
+margin-top:3px;
+}
+
+.botao{
+margin-top:50px;
+display:flex;
+justify-content:center;
+}
+
+.botao a{
+background:white;
+padding:15px 25px;
+border-radius:30px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.footer{
+margin-top:30px;
+text-align:center;
+font-size:12px;
+color:#666;
+}
+</style>
+
 </head>
 <body>
-    <div id="menu">
-        <h1>ola mundo</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit placeat neque fugiat itaque at alias quia culpa ratione exercitationem quibusdam harum dolore fuga sit excepturi eaque, rerum deleniti iusto atque?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam aliquam, aliquid laborum, ratione nam ipsum est dicta a modi provident adipisci placeat eius quia non ex illo. Facilis, nihil dolores.</p>
-    </div>
+
+<div class="container">
+
+<div class="top">
+<span>*</span>
+<span>Subscribe</span>
+</div>
+
+<div class="profile">
+
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<h1>Casa Sol</h1>
+<p>Sua casa mais completa.</p>
+
+</div>
+
+<div class="links">
+
+<a class="card" href="https://wa.me/5511999999999">
+
+<div class="icon">📱</div>
+
+<div class="info">
+WhatsApp
+</div>
+
+</a>
+
+<a class="card" href="#">
+
+<div class="icon">💬</div>
+
+<div class="info">
+Deixe sua opinião
+</div>
+
+</a>
+
+<a class="card" href="#">
+
+<div class="icon">📍</div>
+
+<div class="info">
+Localização
+<div class="sub">
+Av. Castro Alves, 304
+</div>
+</div>
+
+</a>
+
+</div>
+
+<div class="botao">
+<a href="#">
+Junte-se ao projeto
+</a>
+</div>
+
+<div class="footer">
+Meu Site © 2026
+</div>
+
+</div>
+
 </body>
 </html>
